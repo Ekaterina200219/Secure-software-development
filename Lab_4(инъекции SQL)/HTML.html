@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>User information</title>
+</head>
+<body>
+ <h1>Информация о пользователе</h1>
+
+    <form method="get" action="/">
+        <label for="user_id">Введите User ID:</label>
+        <input type="text" id="user_id" name="user_id" required>
+        <button type="submit">Search</button>
+    </form>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% elif user_info %}
+        <h2>Пользователь найден:</h2>
+        <p>ID: {{ user_info[0] }}</p>
+        <p>Имя: {{ user_info[1] }}</p>
+        <p>Отчество: {{ user_info[2] }}</p>
+        <p>Фамилия: {{ user_info[3] }}</p>
+    {% endif %}
+</body>
+</html>
