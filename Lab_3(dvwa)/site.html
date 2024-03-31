@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Форма входа</title>
+</head>
+<body>
+    <h2>Вход</h2>
+    <form action="/login" method="post">
+        <input type="text" name="username" placeholder="Login"><br>
+        <input type="password" name="password" placeholder="Password"><br>
+        <input type="text" name="captcha" placeholder="Введите капчу"><br>
+        <img src="data:image/png;base64,{{ captcha_image }}" alt="Captcha"><br>
+        <input type="submit" value="Войти">
+    </form>
+    <p>{{ message }}</p>
+</body>
+</html>
